@@ -1,3 +1,4 @@
+#!/usr/bin/python3.5
 import requests
 from bs4 import BeautifulSoup as bs
 import re
@@ -71,8 +72,6 @@ if __name__ == '__main__':
 	init = scrape_class()
 	init._scrape_url()
 	init._get_companies(init.soup)
-	# for key in init.companies.keys():
-	# 	print repr(key)
 	jobs = init._get_company_jobs("Das Büro am Draht")
 	with open('test.txt','w') as wf:
 		wfc = csv.writer(wf)
