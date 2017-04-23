@@ -27,7 +27,7 @@ def handle_result(result):
 
 
 with ThreadPoolExecutor(max_workers=8) as pool:
-	for key in list(init.companies.keys())[:10]:
+	for key in list(init.companies.keys()):
 		_ = pool.submit(get_jobs,key)
 		_.add_done_callback(handle_result)
 
